@@ -7,23 +7,20 @@ per i numeri che sono sia multipli di 3 che di 5 stampi FizzBuzz.
 */
 // Referenze
 var listaNumeri = document.getElementById('data');
-var number = 0;
 
 // Genero i numeri
 for (n = 1; n <= 100; n++) {
   // Pongo le condizioni
   if ((n % 3 == 0) && (n % 5 == 0)) {
-    number = 'FizzBuzz' + '<br/>';
+    listaNumeri.innerHTML += 'FizzBuzz' + '<br/>';
   }
   else if (n % 3 == 0) {
-    number = 'Fizz' + '<br/>';
+    listaNumeri.innerHTML +=  'Fizz' + '<br/>';
   }
   else if (n % 5 == 0) {
-    number = 'Buzz' + '<br/>';
+    listaNumeri.innerHTML +=  'Buzz' + '<br/>';
   }
   else {
-    number = n + '<br/>'
+    listaNumeri.innerHTML +=  n + '<br/>'
   }
-
-  listaNumeri.innerHTML +=  number ;
 }
